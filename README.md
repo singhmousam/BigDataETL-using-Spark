@@ -11,4 +11,9 @@ You can download the dataset from here-https://www.cms.gov/openpayments/.
 
 You have to change input and output data directory path. If you want to use HDFS instead of local file system then replace the path accordingly after starting your hdfs.
 
+
+Whole ETL process is done in two languages seperately JAVA and SCALA and there source code is residing in two seperate directories.
+In Scala version MapR-DB has been used as the database whlie in Java version no database is used instead HDFS is used as storage media.
+Code needs to be modified wherever necessary for sake of completion.
+
 *******singhmousam4@gmail.com********
