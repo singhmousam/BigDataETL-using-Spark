@@ -24,7 +24,7 @@ public class HealthcareApp {
 		//Starting Spark session
 		SparkSession session=SparkSession.builder().config(conf).appName("HealthCareApp").getOrCreate();
 		
-		Dataset<Row> ds=session.read().option("header", true).csv("/home/scientist/Mousam_Directory/Projects/HealthcareETL/Dataset/health.csv");
+		Dataset<Row> ds=session.read().option("header", true).csv("---source directory---/Projects/HealthcareETL/Dataset/health.csv");
 		
 		//ds.withColumn("amount", ds.col("Total_Amount_of_Payment_USDollars"));
 		System.out.println(ds.first());
@@ -44,11 +44,12 @@ public class HealthcareApp {
 		paymentsDs.printSchema();
 		
 		paymentsDs.groupBy("natureOfPayment").count().orderBy("count").show();
-		paymentsDs.write().csv("/home/scientist/Mousam_Directory/Projects/HealthcareETL/new.csv");
+		paymentsDs.write().csv("file:///---path to be modified---HealthcareETL/new.csv");
+		//paymentsDs.write().csv("hdfs:///---path to be modifoed----");
 		System.out.println("***********File write successful*********\n\n");
 		//conversion to JSON format
 		System.out.println("JSON format data:");
-		paymentsDs.write().json("/home/scientist/Mousam_Directory/Projects/HealthcareETL/new.json");
+		paymentsDs.write().json("file:///---path to be modified---HealthcareETL/new.json");
 		paymentsDs.toJSON().show();
 		
 		System.out.println("........End Of Program.......");		
