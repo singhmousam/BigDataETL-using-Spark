@@ -18,7 +18,7 @@
         <scala.binary.version>2.11</scala.binary.version>
 
         <!-- version = <spark_version>-mapr-<mapr_eco_version> -->
-        <maprspark.version>2.1.0-mapr-1703</maprspark.version>
+        <maprspark.version>2.4.7</maprspark.version>
 
 
         <mapr.version>5.2.1-mapr</mapr.version>
