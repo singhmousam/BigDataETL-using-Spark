@@ -4,7 +4,7 @@ package ETL.Healtcare;
 public class Payments {
 	private static final long serialVersionUID = 1L;
 	
-	//
+	// Code standardization WIP
 	private String physicianId,dateOfPayment,recordId,payer,physicianSpeciality,natureOfPayment;
 	private double amount;
 	public String getPhysicianId() {
